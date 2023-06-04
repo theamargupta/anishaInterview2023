@@ -1,4 +1,4 @@
-# anishaInterview2023
+# Anisha Interview 2023
 
 This repository contains the resources and materials for the **anishaInterview2023** interview preparation program. The program is designed to provide a comprehensive understanding of web development concepts and prepare candidates for technical interviews.
 
