@@ -160,47 +160,47 @@ To get started with the program, clone this repository and follow the resources 
 
 | Day | Answer | Progress |
 |-----|--------|----------|
-| 1   | A      | ![Progress](https://progress-bar.dev/3/) |
-| 2   | B      | ![Progress](https://progress-bar.dev/7/) |
-| 3   | C      | ![Progress](https://progress-bar.dev/10/) |
-| 4   | B      | ![Progress](https://progress-bar.dev/13/) |
-| 5   | A      | ![Progress](https://progress-bar.dev/17/) |
-| 6   | C      | ![Progress](https://progress-bar.dev/20/) |
-| 7   | B      | ![Progress](https://progress-bar.dev/23/) |
-| 8   | A      | ![Progress](https://progress-bar.dev/27/) |
-| 9   | C      | ![Progress](https://progress-bar.dev/30/) |
-| 10  | B      | ![Progress](https://progress-bar.dev/33/) |
-| 11  | C      | ![Progress](https://progress-bar.dev/37/) |
-| 12  | A      | ![Progress](https://progress-bar.dev/40/) |
-| 13  | B      | ![Progress](https://progress-bar.dev/43/) |
-| 14  | C      | ![Progress](https://progress-bar.dev/47/) |
-| 15  | A      | ![Progress](https://progress-bar.dev/50/) |
-| 16  | C      | ![Progress](https://progress-bar.dev/53/) |
-| 17  | B      | ![Progress](https://progress-bar.dev/57/) |
-| 18  | A      | ![Progress](https://progress-bar.dev/60/) |
-| 19  | C      | ![Progress](https://progress-bar.dev/63/) |
-| 20  | B      | ![Progress](https://progress-bar.dev/67/) |
-| 21  | C      | ![Progress](https://progress-bar.dev/70/) |
-| 22  | A      | ![Progress](https://progress-bar.dev/73/) |
-| 23  | B      | ![Progress](https://progress-bar.dev/77/) |
-| 24  | C      | ![Progress](https://progress-bar.dev/80/) |
-| 25  | A      | ![Progress](https://progress-bar.dev/83/) |
-| 26  | C      | ![Progress](https://progress-bar.dev/87/) |
-| 27  | B      | ![Progress](https://progress-bar.dev/90/) |
-| 28  | A      | ![Progress](https://progress-bar.dev/93/) |
-| 29  | C      | ![Progress](https://progress-bar.dev/97/) |
-| 30  | B      | ![Progress](https://progress-bar.dev/100/) |
+| 1   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 2   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 3   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 4   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 5   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 6   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 7   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 8   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 9   | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 10  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 11  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 12  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 13  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 14  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 15  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 16  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 17  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 18  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 19  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 20  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 21  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 22  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 23  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 24  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 25  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 26  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 27  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 28  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 29  | 0      | ![Progress](https://progress-bar.dev/0/) |
+| 30  | 0      | ![Progress](https://progress-bar.dev/0/) |
 
 ## Chart
 
 ### Day1 to Day10
 
-![Chart](https://chart.googleapis.com/chart?cht=lc&chs=700x300&chxt=x,y&chxl=0:|Day%201|Day%202|Day%203|Day%204|Day%205|Day%206|Day%207|Day%208|Day%209|Day%2010&chds=0,100&chxr=1,0,100&chd=t:3,7,10,13,17,20,23,27,30,33&chdl=Progress&chtt=Progress+Chart)
+![Chart](https://chart.googleapis.com/chart?cht=lc&chs=700x300&chxt=x,y&chxl=0:|Day%201|Day%202|Day%203|Day%204|Day%205|Day%206|Day%207|Day%208|Day%209|Day%2010&chds=0,100&chxr=1,0,100&chd=t:0,0,0,0,0,0,0,0,0,0&chdl=Progress&chtt=Day+1+to+Day+10)
 
 ### Day11 to Day20
 
-![Chart](https://chart.googleapis.com/chart?cht=lc&chs=700x300&chxt=x,y&chxl=0:|Day%2011|Day%2012|Day%2013|Day%2014|Day%2015|Day%2016|Day%2017|Day%2018|Day%2019|Day%2020&chds=0,100&chxr=1,0,100&chd=t:37,40,43,47,50,53,57,60,63,67&chdl=Progress&chtt=Progress+Chart)
+![Chart](https://chart.googleapis.com/chart?cht=lc&chs=700x300&chxt=x,y&chxl=0:|Day%2011|Day%2012|Day%2013|Day%2014|Day%2015|Day%2016|Day%2017|Day%2018|Day%2019|Day%2020&chds=0,100&chxr=1,0,100&chd=t:0,0,0,0,0,0,0,0,0,0&chdl=Progress&chtt=Day+11+to+Day+20)
 
 ### Day21 to Day30
 
-![Chart](https://chart.googleapis.com/chart?cht=lc&chs=700x300&chxt=x,y&chxl=0:|Day%2021|Day%2022|Day%2023|Day%2024|Day%2025|Day%2026|Day%2027|Day%2028|Day%2029|Day%2030&chds=0,100&chxr=1,0,100&chd=t:70,73,77,80,83,87,90,93,97,100&chdl=Progress&chtt=Progress+Chart)
+![Chart](https://chart.googleapis.com/chart?cht=lc&chs=700x300&chxt=x,y&chxl=0:|Day%2021|Day%2022|Day%2023|Day%2024|Day%2025|Day%2026|Day%2027|Day%2028|Day%2029|Day%2030&chds=0,100&chxr=1,0,100&chd=t:0,0,0,0,0,0,0,0,0,0&chdl=Progress&chtt=Day+21+to+Day+30)
