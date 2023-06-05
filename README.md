@@ -158,12 +158,39 @@ To get started with the program, clone this repository and follow the resources 
 
 ## Correct Answers
 
-| Question | Answer | Progress |
-|----------|--------|----------|
-| Q1       | A      | ![Progress](https://progress-bar.dev/25/) |
-| Q2       | B      | ![Progress](https://progress-bar.dev/50/) |
-| Q3       | C      | ![Progress](https://progress-bar.dev/75/) |
+| Day | Answer | Progress |
+|-----|--------|----------|
+| 1   | A      | ![Progress](https://progress-bar.dev/3/) |
+| 2   | B      | ![Progress](https://progress-bar.dev/7/) |
+| 3   | C      | ![Progress](https://progress-bar.dev/10/) |
+| 4   | B      | ![Progress](https://progress-bar.dev/13/) |
+| 5   | A      | ![Progress](https://progress-bar.dev/17/) |
+| 6   | C      | ![Progress](https://progress-bar.dev/20/) |
+| 7   | B      | ![Progress](https://progress-bar.dev/23/) |
+| 8   | A      | ![Progress](https://progress-bar.dev/27/) |
+| 9   | C      | ![Progress](https://progress-bar.dev/30/) |
+| 10  | B      | ![Progress](https://progress-bar.dev/33/) |
+| 11  | C      | ![Progress](https://progress-bar.dev/37/) |
+| 12  | A      | ![Progress](https://progress-bar.dev/40/) |
+| 13  | B      | ![Progress](https://progress-bar.dev/43/) |
+| 14  | C      | ![Progress](https://progress-bar.dev/47/) |
+| 15  | A      | ![Progress](https://progress-bar.dev/50/) |
+| 16  | C      | ![Progress](https://progress-bar.dev/53/) |
+| 17  | B      | ![Progress](https://progress-bar.dev/57/) |
+| 18  | A      | ![Progress](https://progress-bar.dev/60/) |
+| 19  | C      | ![Progress](https://progress-bar.dev/63/) |
+| 20  | B      | ![Progress](https://progress-bar.dev/67/) |
+| 21  | C      | ![Progress](https://progress-bar.dev/70/) |
+| 22  | A      | ![Progress](https://progress-bar.dev/73/) |
+| 23  | B      | ![Progress](https://progress-bar.dev/77/) |
+| 24  | C      | ![Progress](https://progress-bar.dev/80/) |
+| 25  | A      | ![Progress](https://progress-bar.dev/83/) |
+| 26  | C      | ![Progress](https://progress-bar.dev/87/) |
+| 27  | B      | ![Progress](https://progress-bar.dev/90/) |
+| 28  | A      | ![Progress](https://progress-bar.dev/93/) |
+| 29  | C      | ![Progress](https://progress-bar.dev/97/) |
+| 30  | B      | ![Progress](https://progress-bar.dev/100/) |
 
 ## Chart
 
-![Chart](https://chart.googleapis.com/chart?cht=bvg&chs=400x200&chd=t:25,50,75&chl=Q1|Q2|Q3&chds=0,100)
+![Chart](https://chart.googleapis.com/chart?cht=bvg&chs=500x300&chd=t:3,7,10,13,17,20,23,27,30,33,37,40,43,47,50,53,57,60,63,67,70,73,77,80,83,87,90,93,97,100&chl=Day%201|Day%202|Day%203|Day%204|Day%205|Day%206|Day%207|Day%208|Day%209|Day%2010|Day%2011|Day%2012|Day%2013|Day%2014|Day%2015|Day%2016|Day%2017|Day%2018|Day%2019|Day%2020|Day%2021|Day%2022|Day%2023|Day%2024|Day%2025|Day%2026|Day%2027|Day%2028|Day%2029|Day%2030&chds=0,100)
