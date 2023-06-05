@@ -158,8 +158,8 @@ To get started with the program, clone this repository and follow the resources 
 
 ## Correct Answers
 
-| Day | Answer | Progress |
-|-----|--------|----------|
+| Day | Answer | Progress                     |
+|-----|--------|------------------------------|
 | 1   | 0      | ![Progress](https://progress-bar.dev/0/) |
 | 2   | 0      | ![Progress](https://progress-bar.dev/0/) |
 | 3   | 0      | ![Progress](https://progress-bar.dev/0/) |
