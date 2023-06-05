@@ -155,3 +155,15 @@ Feel free to explore each topic and follow the provided links for detailed learn
 ## Getting Started
 
 To get started with the program, clone this repository and follow the resources provided for each day. The resources include video tutorials, documentation, and reference materials to help you grasp the concepts and practice your skills.
+
+## Correct Answers
+
+| Question | Answer | Progress |
+|----------|--------|----------|
+| Q1       | A      | ![Progress](https://progress-bar.dev/25/) |
+| Q2       | B      | ![Progress](https://progress-bar.dev/50/) |
+| Q3       | C      | ![Progress](https://progress-bar.dev/75/) |
+
+## Chart
+
+![Chart](https://chart.googleapis.com/chart?cht=bvg&chs=400x200&chd=t:25,50,75&chl=Q1|Q2|Q3&chds=0,100)
