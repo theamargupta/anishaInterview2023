@@ -193,4 +193,4 @@ To get started with the program, clone this repository and follow the resources 
 
 ## Chart
 
-![Chart](https://chart.googleapis.com/chart?cht=bvg&chs=500x300&chd=t:3,7,10,13,17,20,23,27,30,33,37,40,43,47,50,53,57,60,63,67,70,73,77,80,83,87,90,93,97,100&chl=Day%201|Day%202|Day%203|Day%204|Day%205|Day%206|Day%207|Day%208|Day%209|Day%2010|Day%2011|Day%2012|Day%2013|Day%2014|Day%2015|Day%2016|Day%2017|Day%2018|Day%2019|Day%2020|Day%2021|Day%2022|Day%2023|Day%2024|Day%2025|Day%2026|Day%2027|Day%2028|Day%2029|Day%2030&chds=0,100)
+![Chart](https://chart.googleapis.com/chart?cht=bvg&chs=1000x300&chd=t:3,7,10,13,17,20,23,27,30,33,37,40,43,47,50,53,57,60,63,67,70,73,77,80,83,87,90,93,97,100&chl=Day%201|Day%202|Day%203|Day%204|Day%205|Day%206|Day%207|Day%208|Day%209|Day%2010|Day%2011|Day%2012|Day%2013|Day%2014|Day%2015|Day%2016|Day%2017|Day%2018|Day%2019|Day%2020|Day%2021|Day%2022|Day%2023|Day%2024|Day%2025|Day%2026|Day%2027|Day%2028|Day%2029|Day%2030&chds=0,100)
