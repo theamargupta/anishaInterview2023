@@ -47,7 +47,3 @@
 // Question 15: Object vs. Array
 // Explain the difference between an object and an array in JavaScript.
 
-// Feel free to add more questions or modify the existing ones to suit your needs.
-
-// Solution:
-// Write your solutions below each question.
