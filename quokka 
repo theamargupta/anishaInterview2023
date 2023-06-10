@@ -1,0 +1,8 @@
+const getType = (param) => {
+    return typeof param;
+  };
+
+const capitalize = (string) => {
+    return string && getType(string) === "string"? string.length[0]?.toUpperCase() : string;
+ }
+ console.log("capitalize", capitalize("anisha"));
