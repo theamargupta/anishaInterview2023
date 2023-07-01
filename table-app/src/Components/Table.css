@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  background-color: rgb(233, 244, 251);
+  width: 90rem;
+  height: 100vh;
+}
+.first-heading {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+  padding: 2rem;
+  text-decoration: underline;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+  border: 2px solid #a8d1fa;
+  border-radius: 10%;
+}
+.action {
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #3892ed;
+  color: white;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.search {
+  display: flex;
+  height: 2rem;
+  width: 30%;
+  margin-left: 3rem;
+  border: 1px solid #3892ed;
+  border-radius: 5px;
+}
+.search-btn {
+  background-color: #91d4f6;
+  margin-left: 10px;
+  width: 10%;
+  border: 1px solid #91d4f6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.reset {
+  background-color: #d7f199;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 10%;
+  border: 1px solid #d7f199;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filter {
+  background-color: #6cc69c;
+  width: 10%;
+  border: 1px solid #6cc69c;
+  border-radius: 5px;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+.form2 {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8f6f8;
+  border: 2px solid rgb(205, 243, 246);
+  border-radius: 12px;
+  height: 40px;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+.Company {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.Company select {
+  width: 100%;
+  height: 2rem;
+  margin-top: 6px;
+}
+.Contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.Contact select {
+  width: 100%;
+  height: 2rem;
+  margin-top: 6px;
+}
+.Country {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.Country select {
+  width: 100%;
+  height: 2rem;
+  margin-top: 6px;
+  -webkit-appearance: listbox !important;
+}
+.filterbtn {
+  background-color: #6cc69c;
+  width: 15%;
+  border: 1px solid #6cc69c;
+  border-radius: 5px;
+  margin: 0.5rem;
+  cursor: pointer;
+  padding: 0.7rem;
+}
