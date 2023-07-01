@@ -60,6 +60,7 @@
   height: 2rem;
   width: 30%;
   margin-left: 3rem;
+  padding-left: 0.4rem;
   border: 1px solid #3892ed;
   border-radius: 5px;
 }
