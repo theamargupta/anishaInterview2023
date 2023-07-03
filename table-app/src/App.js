@@ -8,17 +8,16 @@ const App = () => {
   const [searchInput, setSearchInput] = useState("");
   const [searchedData, setSearchedData] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
-
+  const loadUsersData = async () => {
+    return await axios
+      .get("http://localhost:3006/users")
+      .then((res) => {
+        setData(res?.data);
+        setSearchedData(res?.data);
+      })
+      .catch((err) => console.log("err", err));
+  };
   useEffect(() => {
-    const loadUsersData = async () => {
-      return await axios
-        .get("http://localhost:3006/users")
-        .then((res) => {
-          setData(res?.data);
-          setSearchedData(res?.data);
-        })
-        .catch((err) => console.log("err", err));
-    };
     loadUsersData();
   }, []);
 
@@ -54,6 +53,13 @@ const App = () => {
     //   .catch((err) => console.log("err", err));
   };
 
+  const selectOnChangeHandler = (e) => {
+    let result = searchedData.filter(
+      (data) => data[e?.target.name] === e?.target.value
+    );
+    setSearchedData(result);
+  };
+
   return (
     <div className="main-container">
       <h1 className="first-heading">Table</h1>
@@ -65,7 +71,10 @@ const App = () => {
           value={searchInput}
           onChange={handleSearch}
         />
-        <button className="filter" onClick={() => setModalOpen((value)=>!value)}>
+        <button
+          className="filter"
+          onClick={() => setModalOpen((value) => !value)}
+        >
           Filter
         </button>
       </div>
@@ -76,10 +85,12 @@ const App = () => {
           contactValue={getValueByKey(searchedData, "Contact")}
           modalOpen={modalOpen}
           setModalOpen={setModalOpen}
+          selectOnChangeHandler={selectOnChangeHandler}
+          loadUsersData={loadUsersData}
+          setSearchInput={setSearchInput}
         />
       )}
       <br />
-
       <Table usersData={searchedData} />
     </div>
   );

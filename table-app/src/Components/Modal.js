@@ -6,7 +6,9 @@ export const Modal = ({
   contactValue,
   countryValue,
   setModalOpen,
-  modalOpen
+  selectOnChangeHandler,
+  loadUsersData,
+  setSearchInput
 }) => {
   return (
     <div>
@@ -14,7 +16,11 @@ export const Modal = ({
       <form onSubmit={handleSearch} className="form2">
         <div className="Company">
           <label for="Company">Select Company</label>
-          <select name="Company" id="Company">
+          <select
+            name="Company"
+            id="Company"
+            onChange={(e) => selectOnChangeHandler(e)}
+          >
             {companyValue &&
               companyValue.map((data) => {
                 return <option value={data}>{data}</option>;
@@ -23,7 +29,11 @@ export const Modal = ({
         </div>
         <div className="Contact">
           <label for="Contact">Select Contact</label>
-          <select name="Contact" id="Contact">
+          <select
+            name="Contact"
+            id="Contact"
+            onChange={(e) => selectOnChangeHandler(e)}
+          >
             {contactValue &&
               contactValue.map((data) => {
                 return <option value={data}>{data}</option>;
@@ -32,22 +42,31 @@ export const Modal = ({
         </div>
         <div className="Country">
           <label for="Country">Select Country</label>
-          <select name="Country" id="Country">
+          <select
+            name="Country"
+            id="Country"
+            onChange={(e) => selectOnChangeHandler(e)}
+          >
             {countryValue &&
               countryValue.map((data) => {
                 return <option value={data}>{data}</option>;
               })}
           </select>
         </div>
-        <button className="filterbtn" onClick={() => setModalOpen(true)}>
-          OK
+        <button className="filterbtn" onClick={() => loadUsersData()}>
+          Reset
         </button>
-        <button className="filterbtn" onClick={() => setModalOpen(false)}>
+        <button
+          className="filterbtn"
+          onClick={() => {
+            setModalOpen((value) => !value);
+            setSearchInput("");
+            loadUsersData();
+          }}
+        >
           Close
         </button>
       </form>
     </div>
   );
 };
-
-
