@@ -1,27 +1,33 @@
 import React from "react";
 import "./Table.css";
-export const Table = ({ usersData }) => {
+export const Table = ({ tableData, columnData }) => {
   return (
     <>
       <table id="customers">
-        <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-          {/* <th>Action</th> */}
-        </tr>
-        {usersData?.length
-          ? usersData.map((data, id) => {
+        <thead>
+          <tr>
+            {columnData.map(({ key, title }) => (
+              <th key={key}>{title}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {tableData?.length ? (
+            tableData?.map((data, id) => {
               return (
                 <tr key={id}>
-                  <td>{data.Company}</td>
-                  <td>{data.Contact}</td>
-                  <td>{data.Country}</td>
-                  {/* <th>Action</th> */}
+                  {columnData?.map(({ key }) => (
+                    <td key={key}>{data?.[key]}</td>
+                  ))}
                 </tr>
               );
             })
-          : "No data Available"}
+          ) : (
+            <tr>
+              <td>No data Available</td>
+            </tr>
+          )}
+        </tbody>
       </table>
     </>
   );
