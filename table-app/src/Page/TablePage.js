@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CommonTable from "../Components/CommonTable";
+import { BarChart, DoughnutChart, PieChart } from "./Chart";
 
 const TablePage = () => {
   const [tableData, setTableData] = useState([]);
@@ -63,6 +64,17 @@ const TablePage = () => {
             (data.key !== "Country" && activeTab !== "all")
         )}
       />
+      <div style={{ display: "flex", alignItems: "center",flexDirection:"column", width: "100%" }}>
+        <div style={{ width: "50%", margin: "auto", marginBottom:"2rem" }}>
+          <BarChart data={tableData} />
+        </div>
+        <div style={{ width: "50%", margin: "auto", marginBottom:"2rem" }}>
+          <DoughnutChart data={tableData} />
+        </div>
+        <div style={{ width: "50%", margin: "auto", marginBottom:"2rem" }}>
+          <PieChart data={tableData} />
+        </div>
+      </div>
     </div>
   );
 };

@@ -4,80 +4,98 @@
       "id": "1",
       "Company": "Wipro",
       "Contact": "Anisha",
-      "Country": "India"
+      "Country": "India",
+      "sales" : 10320000,
+      "month" : "Jan"
     },
     {
       "id": "2",
       "Company": "TATA",
       "Contact": "Ratan",
-      "Country": "India"
+      "Country": "India",
+      "sales" : 10034500,
+      "month" : "Feb"
     },
 
     {
       "id": "3",
       "Company": "American Tourister",
       "Contact": "John",
-      "Country": "America"
+      "Country": "America",
+      "sales" : 1870000,
+      "month" : "Mar"
     },
     {
       "id": "4",
       "Company": "Hyundai",
       "Contact": "Charles",
-      "Country": "Japanese"
+      "Country": "Japanese",
+      "sales" : 7000000,
+      "month" : "Apr"
     },
     {
       "id": "5",
       "Company": "Ni hao",
       "Contact": "Ching",
-      "Country": "China"
+      "Country": "China",
+      "sales" : 10008750,
+      "month" : "May"
     },
     {
       "id": "6",
       "Company": "Folks Wagon",
       "Contact": "Trem",
-      "Country": "Germany"
+      "Country": "Germany",
+      "sales" : 1740000,
+      "month" : "Jun"
     },
     {
       "id": "7",
       "Company": "Folks Wagon",
       "Contact": "Jim",
-      "Country": "Germany"
+      "Country": "Germany",
+      "sales" : 1004300,
+      "month" : "Jul"
     },
     {
       "id": "8",
       "Company": "Folks Wagon",
       "Contact": "Patrick",
-      "Country": "Germany"
+      "Country": "Germany",
+      "sales" : 1640000,
+      "month" : "Aug"
     },
     {
       "id": "9",
       "Company": "Folks Wagon",
       "Contact": "Jim",
-      "Country": "London"
+      "Country": "London",
+      "sales" : 7330000,
+      "month" : "Sep"
     },
     {
       "id": "10",
       "Company": "Hyundai",
       "Contact": "Patrick",
-      "Country": "Germany"
+      "Country": "Germany",
+      "sales" : 500000,
+      "month" : "Oct"
     },
     {
       "id": "11",
       "Company": "Wipro",
       "Contact": "Ratan",
-      "Country": "America"
+      "Country": "America",
+      "sales" : 18700000,
+      "month" : "Nov"
     },
     {
       "id": "12",
       "Company": "Infosys",
       "Contact": "Anisha",
-      "Country": "America"
-    },
-    {
-      "id": "13",
-      "Company": "Infosys",
-      "Contact": "Anisha Gupta",
-      "Country": "America"
+      "Country": "America",
+      "sales" : 4000000,
+      "month" : "Dec"
     }
   ]
 }
