@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "Company": "Wipro",
+      "Contact": "Anisha",
+      "Country": "India",
+      "sales" : 10320000
+    },
+    {
+      "id": "2",
+      "Company": "TATA",
+      "Contact": "Ratan",
+      "Country": "India",
+      "sales" : 10034500
+    },
+
+    {
+      "id": "3",
+      "Company": "American Tourister",
+      "Contact": "John",
+      "Country": "America",
+      "sales" : 1870000
+    },
+    {
+      "id": "4",
+      "Company": "Hyundai",
+      "Contact": "Charles",
+      "Country": "Japanese",
+      "sales" : 7000000
+    },
+    {
+      "id": "5",
+      "Company": "Ni hao",
+      "Contact": "Ching",
+      "Country": "China",
+      "sales" : 10008750
+    },
+    {
+      "id": "6",
+      "Company": "Folks Wagon",
+      "Contact": "Trem",
+      "Country": "Germany",
+      "sales" : 1740000
+    },
+    {
+      "id": "7",
+      "Company": "Folks Wagon",
+      "Contact": "Jim",
+      "Country": "Germany",
+      "sales" : 1004300
+    },
+    {
+      "id": "8",
+      "Company": "Folks Wagon",
+      "Contact": "Patrick",
+      "Country": "Germany",
+      "sales" : 1640000
+    },
+    {
+      "id": "9",
+      "Company": "Folks Wagon",
+      "Contact": "Jim",
+      "Country": "London",
+      "sales" : 7330000
+    },
+    {
+      "id": "10",
+      "Company": "Hyundai",
+      "Contact": "Patrick",
+      "Country": "Germany",
+      "sales" : 500000
+    },
+    {
+      "id": "11",
+      "Company": "Wipro",
+      "Contact": "Ratan",
+      "Country": "America",
+      "sales" : 18700000
+    },
+    {
+      "id": "12",
+      "Company": "Infosys",
+      "Contact": "Anisha",
+      "Country": "America",
+      "sales" : 4000000
+    }
+  ]
+}
+
+

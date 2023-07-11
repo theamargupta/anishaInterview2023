@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import CommonTable from "../Components/CommonTable";
 import CustomChart from "./Chart";
-
+import jsonData from "../db.json";
 const TablePage = () => {
   const [tableData, setTableData] = useState(null);
   const [copydata, setCopyData] = useState([]);
@@ -10,9 +9,11 @@ const TablePage = () => {
 
   const loadUsersData = async () => {
     try {
-      const res = await axios.get("http://localhost:3006/users");
-      setCopyData(res?.data);
-      setTableData(res?.data);
+      setTimeout(() => {
+        console.log();
+        setCopyData(jsonData.users);
+        setTableData(jsonData.users);
+      }, 1000);
     } catch (error) {
       console.error("error", error);
       throw new Error(error);
