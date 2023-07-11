@@ -1,143 +1,123 @@
-import React from "react";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Bar, Doughnut, Pie } from "react-chartjs-2";
+import React, { useEffect, useState } from "react";
+import { Bar, Doughnut, Line, Pie } from "react-chartjs-2";
+import { Chart, registerables } from "chart.js";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend
-);
+Chart.register(...registerables);
 
-export const options = {
-  plugins: {
-    title: {
-      display: true,
-      text: "Chart.js Bar Chart - Stacked",
-    },
-  },
-  responsive: true,
-  scales: {
-    x: {
-      stacked: true,
-    },
-    y: {
-      stacked: true,
-    },
-  },
+// Add a new chart component
+const CustomChart = ({
+  data,
+  chartType,
+  xAxis = "Company",
+  yAxis = "sales",
+  title = "Doughnut Chart Title",
+}) => {
+  const [chartData, setChartData] = useState(null);
+
+  useEffect(() => {
+    if (data) {
+      const uniqueXAxis = Array.from(new Set(data.map((item) => item[xAxis])));
+      const uniqueYAxis = uniqueXAxis.map((innewValue) =>
+        data
+          .filter((item) => item[xAxis] === innewValue)
+          .reduce((sum, item) => sum + item[yAxis], 0)
+      );
+
+      setChartData({
+        labels: uniqueXAxis,
+        datasets: [
+          {
+            // label: "Sales",
+            data: uniqueYAxis,
+            backgroundColor: [
+              "#FFD3E0", // Pink
+              "#FFDAB9", // Peach
+              "#E6E6FA", // Lavender
+              "#E0FFFF", // Light Cyan
+              "#F0E68C", // Khaki
+              "#F5F5DC", // Beige
+              "#FFFACD", // Lemon Chiffon
+              "#F0FFF0", // Honeydew
+              "#F0F8FF", // Alice Blue
+              "#FFF5EE", // Seashell
+            ],
+            borderColor: "#000",
+            borderWidth: 2,
+          },
+        ],
+      });
+    }
+  }, [data, xAxis, yAxis]);
+
+  // Determine the chart component based on the chartType prop
+  const ChartComponent = (() => {
+    switch (chartType) {
+      case "bar":
+        return Bar;
+      case "doughnut":
+        return Doughnut;
+      case "pie":
+        return Pie;
+      case "line":
+        return Line;
+      default:
+        return null;
+    }
+  })();
+
+  return (
+    <div>
+      {chartData && ChartComponent && (
+        <ChartComponent
+          data={chartData}
+          options={{
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false, // Hide legend
+              },
+              title: {
+                display: true,
+                text: title, // Set the desired title text
+                font: {
+                  size: 16,
+                  weight: "bold",
+                },
+              },
+            },
+            scales:
+              chartType === "bar" || chartType === "line"
+                ? {
+                    y: {
+                      title: {
+                        display: true,
+                        text: yAxis,
+                      },
+                      grid: {
+                        display: false,
+                      },
+                      beginAtZero: true,
+                      ticks: {
+                        callback: (value) => `${value / 1000000}M`,
+                      },
+                    },
+                    x: {
+                      title: {
+                        display: true,
+                        text: xAxis,
+                      },
+                      grid: {
+                        display: false,
+                      },
+                      beginAtZero: true,
+                    },
+                  }
+                : null,
+          }}
+        />
+      )}
+    </div>
+  );
 };
 
-const BarChart = ({ data }) => {
-  const labels = data.map((value) => {
-    return value.month;
-  });
-  const barData = data.map((value) => value.sales);
-
-  const dataSet = {
-    labels,
-    datasets: [
-      {
-        label: "Dataset 1",
-        data: barData,
-        backgroundColor: [
-          "#FF5733",
-          "#806F95",
-          "#54B2F3",
-          "#FFFF33",
-          "#99FF33",
-          "#33FF77",
-          "#33FFFC",
-          "#3399FF",
-          "#7733FF",
-          "#A833FF",
-          "#FF33E9",
-          "#FF3374",
-        ],
-      },
-    ],
-  };
-  return <Bar options={options} data={dataSet} />;
-};
-const DoughnutChart = ({ data }) => {
-  const labels = data.map((value) => {
-    return value.month;
-  });
-  const doughnutData = data.map((value) => value.sales);
-
-  const dataSet = {
-    labels,
-    datasets: [
-      {
-        label: "Dataset 1",
-        data: doughnutData,
-        backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-        ],
-      },
-    ],
-  };
-  return <Doughnut options={options} data={dataSet} />;
-};
-const PieChart = ({ data }) => {
-  const labels = data.map((value) => {
-    return value.month;
-  });
-  const pieData = data.map((value) => value.sales);
-  const PieDataSet = {
-    labels: labels,
-    datasets: [
-      {
-        label: "# of Votes",
-        data: pieData,
-        backgroundColor: [
-          "#FF5733",
-          "#806F95",
-          "#54B2F3",
-          "#FFFF33",
-          "#99FF33",
-          "#33FF77",
-          "#33FFFC",
-          "#3399FF",
-          "#7733FF",
-          "#A833FF",
-          "#FF33E9",
-          "#FF3374",
-        ],
-        borderColor: [
-          "#FF5733",
-          "#806F95",
-          "#54B2F3",
-          "#FFFF33",
-          "#99FF33",
-          "#33FF77",
-          "#33FFFC",
-          "#3399FF",
-          "#7733FF",
-          "#A833FF",
-          "#FF33E9",
-          "#FF3374",
-        ],
-        borderWidth: 1,
-      },
-    ],
-  };
-  return <Pie options={options} data={PieDataSet} />;
-};
-export { BarChart, DoughnutChart, PieChart };
+export default CustomChart;

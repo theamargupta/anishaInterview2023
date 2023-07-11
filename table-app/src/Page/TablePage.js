@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CommonTable from "../Components/CommonTable";
-import { BarChart, DoughnutChart, PieChart } from "./Chart";
+import CustomChart from "./Chart";
 
 const TablePage = () => {
-  const [tableData, setTableData] = useState([]);
+  const [tableData, setTableData] = useState(null);
   const [copydata, setCopyData] = useState([]);
   const [activeTab, setActiveTab] = useState("all");
 
@@ -52,29 +52,67 @@ const TablePage = () => {
           </button>
         ))}
       </div>
+      <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+        <div style={{ minHeight: "25vh", width: "50vw" }}>
+          {tableData && (
+            <CustomChart
+              chartType={"bar"}
+              data={tableData}
+              title={"Comapny Sales Chart"}
+              xAxis="Company"
+              yAxis="sales"
+            />
+          )}
+        </div>
+        <div style={{ minHeight: "25vh", width: "50vw" }}>
+          {tableData && (
+            <CustomChart
+              chartType={"line"}
+              data={tableData}
+              xAxis="Country"
+              yAxis="sales"
+              title={"Country Sales Chart"}
+            />
+          )}
+        </div>
+      </div>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div style={{ minHeight: "25vh", width: "25vw" }}>
+          {tableData && (
+            <CustomChart
+              chartType={"pie"}
+              data={tableData}
+              title={"Comapny Sales Chart"}
+              xAxis="Company"
+              yAxis="sales"
+            />
+          )}
+        </div>
+        <div style={{ minHeight: "25vh" }}>
+          {tableData && (
+            <CustomChart
+              chartType={"doughnut"}
+              data={tableData}
+              xAxis="Country"
+              yAxis="sales"
+              title={"Country Sales Chart"}
+            />
+          )}
+        </div>
+      </div>
       <CommonTable
         tableData={tableData}
         columnData={[
           { key: "Company", title: "Company" },
           { key: "Contact", title: "Contact" },
           { key: "Country", title: "Country" },
+          { key: "sales", title: "Sales" },
         ].filter(
           (data) =>
             activeTab === "all" ||
             (data.key !== "Country" && activeTab !== "all")
         )}
       />
-      <div style={{ display: "flex", alignItems: "center",flexDirection:"column", width: "100%" }}>
-        <div style={{ width: "50%", margin: "auto", marginBottom:"2rem" }}>
-          <BarChart data={tableData} />
-        </div>
-        <div style={{ width: "50%", margin: "auto", marginBottom:"2rem" }}>
-          <DoughnutChart data={tableData} />
-        </div>
-        <div style={{ width: "50%", margin: "auto", marginBottom:"2rem" }}>
-          <PieChart data={tableData} />
-        </div>
-      </div>
     </div>
   );
 };

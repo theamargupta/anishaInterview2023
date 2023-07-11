@@ -5,7 +5,7 @@
 }
 .main-container {
   background-color: rgb(233, 244, 251);
-  height: 89vh;
+  min-height: 89vh;
 }
 .first-heading {
   display: flex;
