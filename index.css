@@ -4,8 +4,8 @@
 }
 .main-container {
   background-color: rgb(221, 239, 251);
-  width: 90rem;
-  height: 100vh;
+  max-width: 90vw;
+ min-height: 100vh;
 }
 .first-heading {
   display: flex;

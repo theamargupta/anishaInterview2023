@@ -124,7 +124,7 @@
 }
 /* Tabs */
 .tab-container {
-  /* max-width: 1080px; */
+  max-width: 80vw;
   margin: 0 auto;
   background-color: rgb(233, 244, 251);
   padding-top: 2rem;
@@ -138,13 +138,13 @@
 
 .tab-button {
   padding: 10px 15px;
-  margin-right: 10px;
+  margin-bottom: 10px;
   font-size: 16px;
   background-color: transparent;
   border: none;
   cursor: pointer;
   outline: none;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .tab-button:hover {
