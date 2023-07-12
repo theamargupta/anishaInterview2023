@@ -51,8 +51,8 @@ const TablePage = () => {
                 chartType={"bar"}
                 data={tableData}
                 title={"Comapny Sales Chart"}
-                xAxis="Company"
-                yAxis="sales"
+                xAxis="Contact"
+                yAxis="Country"
               />
             )}
           </div>
@@ -62,7 +62,7 @@ const TablePage = () => {
                 chartType={"line"}
                 data={tableData}
                 xAxis="Country"
-                yAxis="sales"
+                yAxis="Contact"
                 title={"Country Sales Chart"}
               />
             )}
