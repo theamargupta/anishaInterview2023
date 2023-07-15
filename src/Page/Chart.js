@@ -17,10 +17,23 @@ const CustomChart = ({
   useEffect(() => {
     if (data) {
       const uniqueXAxis = Array.from(new Set(data.map((item) => item[xAxis])));
+      // Methord One
+      const counts = {};
+      data
+        .map((item) => item[xAxis])
+        .forEach((x) => (counts[x] = (counts[x] || 0) + 1));
+
+      const finalData = uniqueXAxis.map((innewValue) => counts[innewValue]);
+      console.log(finalData);
+      // Mthord 2
       const uniqueYAxis = uniqueXAxis.map((innewValue) =>
         data
           .filter((item) => item[xAxis] === innewValue)
-          .reduce((sum, item) => sum + item[yAxis], 0)
+          .reduce(
+            (sum, item) =>
+              typeof item[yAxis] === "number" ? sum + item[yAxis] : sum + 1,
+            0
+          )
       );
 
       setChartData({
@@ -97,9 +110,9 @@ const CustomChart = ({
                         display: false,
                       },
                       beginAtZero: true,
-                      ticks: {
-                        callback: (value) => `${value / 1000000}M`,
-                      },
+                      // ticks: {
+                      //   callback: (value) => `${value / 1000000}M`,
+                      // },
                     },
                     x: {
                       title: {
