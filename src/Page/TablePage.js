@@ -6,20 +6,15 @@ import Sidebar from "../Components/Sidebar";
 const TablePage = () => {
   const [tableData, setTableData] = useState(null);
   const [copydata, setCopyData] = useState([]);
-  const [currentPage, setCurrentPage] = useState([]);
-  const rowsPerPage = 2;
-  const lastIndex = currentPage * rowsPerPage;
-  const firstIndexForNextPage = lastIndex - rowsPerPage;
-  const dataRows = jsonData?.slice(firstIndexForNextPage, firstIndexForNextPage + rowsPerPage);
-  const [activeTab, setActiveTab] = useState("all"); 
-  const numberOfPages = Math.ceil(jsonData?.length / rowsPerPage);
-  const numbers = [...Array(numberOfPages + 1).keys()].slice(1);
-  console.log("dataRows ====>>>>>", jsonData?.slice(0, 2));
+  const [activeTab, setActiveTab] = useState("all");
+
+ 
+
   const loadUsersData = async () => {
     try {
       setTimeout(() => {
-        setCopyData(jsonData.slice(0, 2));
-        setTableData(jsonData.slice(0, 2));
+        setCopyData(jsonData);
+        setTableData(jsonData);
       }, 1000);
     } catch (error) {
       console.error("error", error);
@@ -30,6 +25,7 @@ const TablePage = () => {
   useEffect(() => {
     loadUsersData();
   }, []);
+
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
@@ -44,20 +40,7 @@ const TablePage = () => {
   };
 
   const countries = ["All", ...getValueByKey(copydata, "Country")]; // Replace with your country options
-  const changeCurrentPage = (id) => {
-    setCurrentPage(id);
-  };
-  const previousPage = () => {
-    if (currentPage !== 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-  const nextPage = () => {
-    if (currentPage !== numberOfPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
+ 
   return (
     <Sidebar
       countries={countries}
@@ -128,35 +111,6 @@ const TablePage = () => {
               (data.key !== "Country" && activeTab !== "all")
           )}
         />
-        <nav>
-          <ul>
-            <li>
-              <button
-                href="#"
-                onClick={() => previousPage()}
-                className="page-item"
-              >
-                Prev
-              </button>
-            </li>
-            {numbers.map((n, i) => (
-              <li
-                key={i}
-                className={`page-item ${currentPage === n ? "active" : " "}`}
-              >
-                {" "}
-                <button href="#" onClick={(n) => changeCurrentPage(n)}>
-                  {n}
-                </button>
-              </li>
-            ))}
-            <li>
-              <button onClick={() => nextPage()} className="page-item">
-                Next
-              </button>
-            </li>
-          </ul>
-        </nav>
       </div>
     </Sidebar>
   );

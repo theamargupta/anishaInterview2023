@@ -77,3 +77,60 @@ obj2[val]="amar3"
 
 console.log(arr2[5])
 console.log(obj2["amar"])
+
+let data = [
+  {
+    id: "1",
+  },
+  {
+    id: "2",
+  },
+  {
+    id: "3",
+  },
+  {
+    id: "4",
+  },
+  {
+    id: "5",
+  },
+  {
+    id: "6",
+  },
+  {
+    id: "7",
+  },
+];
+const copyData = [...data];
+let currentPage = 4;
+let rowsOnPage = 2;
+
+let start = (currentPage - 1) * rowsOnPage;
+console.log(start);
+let end = start + rowsOnPage;
+console.log(end);
+const dataToDisplay = data.slice(start, end);
+// const dataToDisplay = data.slice(2 , 4)
+// [{ id: 2 }, { id: 3 }];
+console.log(dataToDisplay);
+
+const prev = () => {
+  start = start - rowsOnPage;
+  end = end - rowsOnPage;
+  data = copyData.slice(start, end);
+  return data;
+};
+const next = () => {
+  start = start + rowsOnPage;
+  end = end + rowsOnPage;
+  data = copyData.slice(start, end);
+  return data;
+};
+// const pageNumbersArr=["1","2","3","4"]
+console.log(Math.ceil(copyData.length / rowsOnPage));
+console.log(
+  Array.from(
+    { length: Math.ceil(copyData.length / rowsOnPage) },
+    (_, index) => index + 1
+  )
+);

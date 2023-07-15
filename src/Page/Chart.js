@@ -23,8 +23,8 @@ const CustomChart = ({
         .map((item) => item[xAxis])
         .forEach((x) => (counts[x] = (counts[x] || 0) + 1));
 
-      const finalData = uniqueXAxis.map((innewValue) => counts[innewValue]);
-      console.log(finalData);
+      // const finalData = uniqueXAxis.map((innewValue) => counts[innewValue]);
+
       // Mthord 2
       const uniqueYAxis = uniqueXAxis.map((innewValue) =>
         data
